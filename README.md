@@ -36,7 +36,7 @@ grunt.initConfig({
 
 ## Options
 
-Any options not specified below are passed directly to [markdown-it](https://github.com/markdown-it/markdown-it).
+Possible options are as follows:
 
 ### `options.highlightjs`
 Type: `boolean` Default: `false`
@@ -59,6 +59,10 @@ Simple way to override the default closing tag(s) for a code block. Make sure to
 Type: `object` Default: `null`
 
 Pass plugins to markdown-it. _Currently only plugins with zero configuration or a single configuration object will work._
+
+### `options.*`
+
+Any other options not specified above are passed directly to [markdown-it](https://github.com/markdown-it/markdown-it).
 
 ## Release History
 
