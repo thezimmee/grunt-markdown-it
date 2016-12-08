@@ -2,7 +2,7 @@
 
 Small wrapper for [markdown-it](https://github.com/markdown-it/markdown-it). Converts `*.md` files to `.html` files.
 
-- Syntax highlighting
+- Syntax highlighting support
 - Works with many `markdown-it` plugins
 
 ## Getting Started
@@ -41,9 +41,9 @@ Possible options are as follows:
 ### `options.highlightjs`
 Type: `boolean` Default: `false`
 
-Easy way to enable syntax highlighting with [highlight.js](highlightjs.org/). Alternatively you may use `markdown-it`'s `highlight` property, or the `options.plugins` property, to implement a different syntax highlighting soluton.
+Easy way to enable parsing of code blocks for syntax highlighting with [highlight.js](highlightjs.org/). Alternatively you may use `markdown-it`'s `highlight` property, or the `options.plugins` property, to implement a different syntax highlighting soluton.
 
-_Note: If set to true, make sure `highlight.js` is installed._
+_Note: If set to true, make sure `highlight.js` is installed. You will also need to include the `highlight.js` script and desired styles. See [highlight.js usage](highlightjs.org/usage/) for details._
 
 ### `options.prefix`
 Type: `string` Default: `<pre class="hljs"><code class="{{langClass}}">`
