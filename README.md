@@ -66,7 +66,7 @@ Any other options not specified above are passed directly to [markdown-it](https
 
 ## Release History
 
-- 0.1.1: 
+- 0.1.1: Initial release.
 
 ## To Do:
 
