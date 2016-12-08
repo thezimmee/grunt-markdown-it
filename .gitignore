@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# temp
+.temp
+
+# node
+node_modules
+npm-debug.log
+
+# IDE
+*.sublime-*

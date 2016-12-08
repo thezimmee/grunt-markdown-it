@@ -1,0 +1,38 @@
+{
+  "name": "grunt-markdown-it",
+  "description": "wrapper for markdown-it.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/thezimmee/grunt-markdown-it",
+  "author": "The Zimmee <thezimmee@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thezimmee/grunt-markdown-it.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thezimmee/grunt-markdown-it/issues"
+  },
+  "license": "MIT",
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-nodeunit": "^1.0.0",
+    "highlight.js": "^9.8.0",
+    "markdown-it": "^8.2.1",
+    "markdown-it-anchor": "^2.6.0",
+    "markdown-it-attrs": "^0.8.0",
+    "markdown-it-table-of-contents": "^0.3.1"
+  },
+  "keywords": [
+    "gruntplugin",
+    "markdown",
+    "html"
+  ]
+}
