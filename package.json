@@ -1,7 +1,7 @@
 {
   "name": "grunt-markdown-it",
   "description": "wrapper for markdown-it.",
-  "version": "0.1.1",
+  "version": "0.2.1",
   "homepage": "https://github.com/thezimmee/grunt-markdown-it",
   "author": "The Zimmee <thezimmee@gmail.com>",
   "repository": {
