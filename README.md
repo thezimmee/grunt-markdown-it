@@ -58,19 +58,59 @@ Simple way to override the default closing tag(s) for a code block. Make sure to
 ### `options.plugins`
 Type: `object` Default: `null`
 
-Pass plugins to markdown-it. _Currently only plugins with zero configuration or a single configuration object will work._
+There are two ways to use markdown-it plugins. For each plugin, use the plugin name for the object key, and either an `object` or `function` as the value.
+
+This example shows both ways of using a plugin:
+
+```js
+options: {
+    plugins: {
+        'markdown-it-anchor': {
+            level: 1
+        },
+        'markdown-it-table-of-contents': {
+            includeLevel: [2,3],
+            containerClass: 'toc-test',
+        },
+        'markdown-it-attrs': {},
+        'markdown-it-container': function (md) {
+            var container = require('markdown-it-container');
+            var tags = [];
+            md.use(container, 'html', {
+                validate: function (name) {
+                    return name.trim().match(/([a-z]+)?\(.*\)/);
+                },
+                render: function (tokens, idx) {
+                    if (tokens[idx].nesting === 1) {
+                        var info = tokens[idx].info.trim();
+                        var attrs = info.match(/\(.*\)/) ? info.match(/\(.*\)/)[0] : null;
+                        var tag = info.split('(')[0];
+                        tags.push(tag);
+                        return '<' + tag + (attrs ?  ' ' + attrs.slice(1, attrs.length - 1) : '') + '>\n';
+                    } else {
+                        var html = '</' + tags[tags.length - 1] + '>\n';
+                        tags.pop();
+                        return html;
+                    }
+                }
+            });
+        }
+    }
+}
+```
 
 ### `options.*`
 
-Any other options not specified above are passed directly to [markdown-it](https://github.com/markdown-it/markdown-it).
+Any option not specified above is passed directly to [markdown-it](https://github.com/markdown-it/markdown-it).
 
 ## Release History
 
+- 0.2.1: Ability to use any `[markdown-it](https://github.com/markdown-it/markdown-it)` plugin.
 - 0.1.1: Initial release.
 
 ## To Do:
 
-- [ ] Integrate markdown-it plugins that might have multiple arguments.
+- [x] Integrate markdown-it plugins that might have multiple arguments.
 
 ## License
 

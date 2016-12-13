@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "highlight.js": "^9.8.0",
-    "markdown-it": "^8.2.1",
+    "markdown-it": "^8.2.1"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
@@ -30,6 +30,7 @@
     "grunt-contrib-nodeunit": "^1.0.0",
     "markdown-it-anchor": "^2.6.0",
     "markdown-it-attrs": "^0.8.0",
+    "markdown-it-container": "^2.0.0",
     "markdown-it-table-of-contents": "^0.3.1"
   },
   "keywords": [

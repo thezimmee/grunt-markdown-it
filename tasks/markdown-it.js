@@ -15,6 +15,7 @@ module.exports = function(grunt) {
 		// merge options to defaults
 		var options = this.options();
 		var html;
+		var md = require('markdown-it');
 
 		// add highlight.js
 		if (options.highlightjs && !options.highlight) {
@@ -30,17 +31,21 @@ module.exports = function(grunt) {
 
 					return prefix + md.utils.escapeHtml(str) + suffix;
 				}
-			}
+			};
 		}
 
 		// init markdown-it
-		var md = require('markdown-it')(options);
+		md = md(options);
 
 		// use plugins
 		if (options.plugins) {
 			var keys = Object.keys(options.plugins);
 			for (var i = 0; i < keys.length; i++) {
-				md.use(require(keys[i]), options.plugins[keys[i]]);
+				if (typeof options.plugins[keys[i]] === 'function') {
+					options.plugins[keys[i]](md);
+				} else {
+					md.use(require(keys[i]), options.plugins[keys[i]]);
+				}
 			}
 		}
 

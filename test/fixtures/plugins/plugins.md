@@ -10,9 +10,15 @@ This note demonstrates some of what [Markdown][1] is capable of doing.
 
 ## Basic formatting{.testing}
 
+::::: span(class="testing-a few classes")
+:::: a(href="http://google.com/test/this/out" data-ng-show="showThis()" id="myId")
+::: span(id="test-id")
 Paragraphs can be written like so. A paragraph is the basic block of Markdown. A paragraph is what text will turn into when there is no reason it should become anything else.
 
 Paragraphs must be separated by a blank line. Basic formatting of *italics* and **bold**{.bolder} is supported. This *can be **nested** like* so.
+:::
+::::
+:::::
 
 ## Lists
 
@@ -23,7 +29,9 @@ Paragraphs must be separated by a blank line. Basic formatting of *italics* and 
 3. Number 3
 4. Ⅳ
 
+::: a(href="#testing" title="I am the title that says \"I am the title\" (pretty cool, eh?)")
 *Note: the fourth item uses the Unicode character for [Roman numeral four][2].*
+:::
 
 ### Unordered list
 
