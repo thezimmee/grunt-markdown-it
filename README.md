@@ -105,7 +105,7 @@ Any option not specified above is passed directly to [markdown-it](https://githu
 
 ## Release History
 
-- 0.2.1: Ability to use any `[markdown-it](https://github.com/markdown-it/markdown-it)` plugin.
+- 0.2.1: Ability to use any [markdown-it](https://github.com/markdown-it/markdown-it) plugin.
 - 0.1.1: Initial release.
 
 ## To Do:
