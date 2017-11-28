@@ -67,7 +67,7 @@ module.exports = function(grunt) {
 
 
 			// parse markdown
-			html = md.render(src);
+			html = md.render(src, { file: f });
 
 			// write to destination
 			grunt.file.write(f.dest, html);
